@@ -127,6 +127,45 @@ Part of the pipeline: raw files → scan → enriched AI classification → agen
 - **tags**, **ownership**, **review_status**
 
 ### Purpose
+## skills.sh — The Open Agent Skills Ecosystem
+
+| | |
+|---|---|
+| **URL** | https://www.skills.sh |
+| **Concept** | Package registry for AI agent skills — `npx skills add <owner/repo>` |
+| **Total installs tracked** | 90,984 |
+| **Supported agents** | Claude Code, Cursor, Codex, GitHub Copilot, Windsurf, Gemini, **Cline**, AMP, Antigravity, ClawdBot |
+
+### Key Publishers
+- **obra/superpowers** — Jesse Vincent's canonical superpowers (our ecosystem's upstream)
+- **vercel-labs** — Most downloaded (find-skills: 1.5M, react-best-practices: 395K)
+- **microsoft/azure-skills** — Enterprise (4.7M total)
+- **anthropics/skills** — Official (frontend-design: 406K, pdf: 103K)
+- **mattpocock/skills** — TDD, diagnose, triage, write-a-skill
+
+### Our Ecosystem's Skills on the Leaderboard
+| Skill | Publisher | Installs | Rank |
+|-------|-----------|----------|------|
+| brainstorming | obra/superpowers | 155.3K | #33 |
+| using-superpowers | obra/superpowers | 94.7K | #92 |
+| systematic-debugging | obra/superpowers | 94.0K | #93 |
+| writing-plans | obra/superpowers | 93.3K | #95 |
+| requesting-code-review | obra/superpowers | 82.3K | #102 |
+| test-driven-development | obra/superpowers | 81.6K | #106 |
+| executing-plans | obra/superpowers | 75.7K | #119 |
+| subagent-driven-development | obra/superpowers | 69.7K | #128 |
+| verification-before-completion | obra/superpowers | 67.7K | #133 |
+| receiving-code-review | obra/superpowers | 65.2K | #138 |
+| writing-skills | obra/superpowers | 64.9K | #140 |
+| dispatching-parallel-agents | obra/superpowers | 63.1K | #144 |
+| using-git-worktrees | obra/superpowers | 63.1K | #145 |
+| finishing-a-development-branch | obra/superpowers | 60.9K | #151 |
+
+### Implications for ~/.cline/
+- The skills we've been cloning are the industry-standard agent capabilities
+- We should use `npx skills add <repo>` instead of manual cloning
+- Cline is a supported agent — our skills can be published here
+- Install: `npx skills add obra/superpowers` would pull all canonical skills
 Connects raw Python scripts to the agent/skill framework — classifies each file by what kind of intelligent asset it is and scores it for business value and integration readiness.
 ### Key scripts
 - `ai-conversation-exports.py` — File organization for AI export tools
