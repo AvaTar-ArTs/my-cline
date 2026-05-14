@@ -1,0 +1,14 @@
+# Cline runtime data (auto-generated, don't track)
+data/
+*.csv
+*.pyc
+__pycache__/
+
+# Large generated exports (track HABIT.md and Cline exports but not large Gemini data)
+chat-history/gemini/
+
+# macOS metadata
+.DS_Store
+
+# Old analysis exports
+my-supremepowers-deepdive-export.md
