@@ -1,36 +1,53 @@
 # Cross-Platform Ecosystem Memory
 
-**Purpose**: A single document any agent (Cline, Claude, Qwen, Gemini, Codex, Cursor)
-can read to understand the full architecture of Steven's AI ecosystem.
+**Purpose**: A single document any agent can read to understand the current
+landscape. This is a snapshot, not an authority — the system is fluid and evolving.
 
-**Canonical source of truth**: `~/my-supremepowers/`
-**Agent workspace**: `~/.cline/`
+**There is no primary.** Each platform leads when it's the right tool.
 
 ---
 
-## Six Platforms, One System
+## The Platforms
 
-| Platform | Role | Size | Key Location | Git Remote |
-|----------|------|------|-------------|------------|
-| **my-supremepowers** | Canonical control plane | 1.2GB | `~/my-supremepowers/` | `AvaTar-ArTs/my-powers` |
-| **Cline** | Self-managing agent | self | `~/.cline/` | `AvaTar-ArTs/my-cline` |
-| **iterm2** | Mother repo / telemetry | 4.9GB | `~/iterm2/` | `GPTJunkie/iterm2` |
-| **Cursor** | Desktop GUI (symlinked) | 1.2GB | `~/.cursor/` → `iterm2/cursor-ecosystem/.cursor` | (in iterm2) |
-| **Qwen** | Integration workshop | 659MB | `~/.qwen/` | (local) |
-| **Gemini** | Extension host | 2.4GB | `~/.gemini/` | (local) |
-| **Codex** | Normalized runtime | 1.0GB | `~/.codex/` | (local) |
+| Platform | Size | Location | Git |
+|----------|------|----------|-----|
+| **my-supremepowers** | 1.2GB | `~/my-supremepowers/` | `AvaTar-ArTs/my-powers` |
+| **Cline** | self | `~/.cline/` | `AvaTar-ArTs/my-cline` |
+| **iterm2** | 4.9GB | `~/iterm2/` | `GPTJunkie/iterm2` |
+| **Cursor** | 1.2GB | `~/.cursor/` → `iterm2/cursor-ecosystem/.cursor` | (in iterm2) |
+| **Qwen** | 659MB | `~/.qwen/` | (local) |
+| **Gemini** | 2.4GB | `~/.gemini/` | (local) |
+| **Codex** | 1.0GB | `~/.codex/` | (local) |
 
-## Canonical Hierarchy
+## Flow, Not Hierarchy
+
+There is no canonical source. Different platforms carry the latest work
+at different times depending on what's being built and which tool fits.
+The ecosystem is fluid — ideas, agents, and patterns move between platforms
+as the work demands. What was "authoritative" last week may be legacy today.
+
+## Architecture Pattern (Recurring, Not Prescribed)
+
+Every platform tends toward the same pattern, but not because one dictates it —
+because it emerges from what works:
 
 ```
-my-supremepowers (author here first)
-    ↓
-Qwen (integration/staging)
-Gemini (extension host)
-Codex (normalized runtime)
-Cursor (GUI surface)
-Cline (autonomous agent)
+Governance Doc → Import/Adapt Mechanism → Runtime → Memory/Tracking
 ```
+
+## Agent Suite (~40 core definitions that replicate across platforms)
+
+### Meta-Cognition
+self-evolution, integrated-evolution, ecosystem-learning, ecosystem-synergy, capability-atlas
+
+### Engineering Roles
+system-architect, backend-architect, frontend-architect, api-specialist, database-specialist, devops-engineer, python-expert, javascript-expert, performance-engineer, security-engineer, testing-specialist, technical-writer
+
+### Operations
+code-reviewer, ecosystem-analyzer, filesystem-inventory, path-list-analyzer, tree-explorer, context-handoff-compiler, content-consolidator, content-organizer
+
+### Business
+revenue-optimizer, xeo-strategist, seo-keyword-analyst, project-launch-manager, knowledge-automation-strategist
 
 ## Key Architecture Patterns
 

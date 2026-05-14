@@ -27,6 +27,8 @@ to map the complete architecture of Steven's ecosystem.
 - **Git cleanup** — Removed large audit data files (JSON, tar.gz) from git tracking, added to .gitignore. Secrets scrubbed from commit history via filter-branch. Both repos pushed: `AvaTar-ArTs/my-cline` and `AvaTar-ArTs/my-powers`.
 
 ### Key Decisions (continued)
+### Reframed
+- **Removed "canonical hierarchy"** from ECOSYSTEM.md — there is no primary platform. The system is fluid and evolving. Each platform leads when it's the right tool. Ideas, agents, and patterns move between platforms as the work demands.
 - Secrets-bearing notebooklm files gitignored, not committed
 - Large audit data (50MB+ JSON) excluded from git
 - Created `memory/CHANGELOG.md` — this file
