@@ -31,6 +31,11 @@ def fmt_ts(ts):
 def extract_blocks(blocks):
     lines = []
     for b in blocks:
+        if not isinstance(b, dict):
+            # Some content entries are plain strings (tool results, etc.)
+            txt = str(b).strip()
+            if txt: lines.append(txt + "\n")
+            continue
         t = b.get("type", "")
         if t == "text":
             txt = b.get("text", "").strip()

@@ -116,10 +116,12 @@ Codex has a 4-tier system for importing agents from Qwen:
 
 ### 3. Chat History System (Cline)
 3-layer redundancy for session persistence:
-- **launchd**: Every 5 min (Cline) / 6 min (Gemini) — macOS native
-- **cron**: Every hour — fallback
-- **Manual**: `ai-export-all` command
+- **launchd** (5 min Cline, 6 min Gemini) ✅ Active — both `LastExitStatus=0`
+- **cron** (hourly Cline + hourly@:30 Gemini) ✅ Active
+- **Manual**: `ai-export-all` / `cline-export` / `gemini-export`
 - Exports include: thinking traces, tool calls, metadata, timestamps
+
+**Known fix applied**: Script was crashing on string-type content blocks (not dicts) in some sessions. Fixed 2026-05-14 with `isinstance(b, dict)` guard.
 
 ### 4. The Cline Lifecycle
 - **On startup**: Export previous sessions, read memory
