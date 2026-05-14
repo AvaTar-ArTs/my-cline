@@ -115,6 +115,15 @@ Every platform follows: Governance Doc → Import Mechanism → Runtime → Trac
 - **agent_tier**: Tier-1-Compatible, etc.
 - **dependencies** / **dependents**: dependency mapping
 - **documentation_score**, **test_coverage**, **code_standards**, **security_score**, **accessibility_score**
+## pythons/all_scan_worktrees.csv — Worktree Scan
+
+| | |
+|---|---|
+| **Location** | `~/pythons/all_scan_worktrees.csv` |
+| **Size** | 1MB, 6,184 rows |
+| **Purpose** | Raw scan of all files in .worktrees/ directory |
+
+Part of the pipeline: raw files → scan → enriched AI classification → agent/skill framework.
 - **tags**, **ownership**, **review_status**
 
 ### Purpose
