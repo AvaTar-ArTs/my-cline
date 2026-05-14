@@ -84,6 +84,26 @@ Every platform follows: Governance Doc → Import Mechanism → Runtime → Trac
 |-------|-----------|--------|---------|
 | my-supremepowers | 5-tier system | npm sync + symlinks | Skills, agents, hooks |
 | Qwen | Capability Registry | `qwen-sp` bootstrap | Hookify middleware |
+## AutoTagger — File Scanner + n8n Workflow Marketplace
+
+| | |
+|---|---|
+| **Location** | `~/AutoTagger/` |
+| **Size** | 730MB |
+| **Git** | `AvaTar-ArTs/AutoTagger` |
+
+### Core Tool
+`current/autotagger.py` — Python file scanner with semantic awareness, SQLite output, CSV/HTML/MD reporting. CLI entry: `autotag <directory> [prefix]`
+
+### n8n Workflow Library (13 packages)
+Self-contained workflow packages under `n8n_workflows/workflows/`:
+- **Free**: trend-analyzer-free
+- **Pro (12)**: trend-analyzer-pro, ai-note-taker-pro, content-repurposing-pro, ai-voice-generator-pro, local-llm-assistant-pro, private-gpt-rag-pro, ai-video-generator-pro, faceless-youtube-automation-pro, tiktok-ai-generator-pro, aeo-optimizer-pro, agentic-workflow-builder-pro, multimodal-pipeline-pro
+
+Each package has `workflow.json` (n8n import), `.env.example`, and `README.md`.
+
+### V6 SaaS Bundle
+`V6.md`, `V6_SAAS_OVERVIEW.md`, `saas/` strategy + roadmap, `saas_landing_v1.html`
 | Codex | Agent Normalization Registry | Qwen→Codex staging | Command wrappers |
 | Cline | CLINE.md | Manual scripts | launchd + lifecycle hooks |
 
