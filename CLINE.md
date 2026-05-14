@@ -27,6 +27,11 @@ Every session is automatically exported to `chat-history/` via redundant layers:
 3. **Cline itself** — via lifecycle hooks below
 
 Exports include thinking traces, tool calls, and full session metadata.
+### On /save or /export command
+When the user invokes `/save` or `/export`:
+1. Run `bash ~/.cline/scripts/save-current-session.sh [format]`
+2. The format argument is optional: md (default), html, json
+3. This captures current workspace state and triggers any pending completed session exports
 
 ## Lifecycle Hooks (Cline's Own Behavior)
 

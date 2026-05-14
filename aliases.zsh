@@ -34,6 +34,11 @@ ai-search() {
         echo "Usage: ai-search <search-term>"
         return 1
     fi
+# /save — Export current session
+alias cline-save='bash ~/.cline/scripts/save-current-session.sh'
+alias cline-save-md='bash ~/.cline/scripts/save-current-session.sh md'
+alias cline-save-html='bash ~/.cline/scripts/save-current-session.sh html'
+alias cline-save-json='bash ~/.cline/scripts/save-current-session.sh json'
     local term="$*"
     echo "🔍 Searching all AI chat history for: $term"
     echo ""
