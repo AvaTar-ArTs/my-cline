@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Export Cline sessions to markdown. Saves thinking, tools, metadata."""
 from __future__ import annotations
-import json, os, sys, argparse
+import json, os, sys, argparse, re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -77,18 +77,33 @@ def fmt_conversation(messages):
         parts.append(f"### {icon} {role.title()}{ts_s}\n\n{text}")
     return "\n\n---\n\n".join(parts)
 
+def clean_title(raw):
+    """Clean a raw title string for use as a filename-friendly session title."""
+    # Remove XML wrappers
+    c = raw.replace("<user_input", "").replace("</user_input>", "").strip()
+    # Collapse shell operators into readable form
+    c = re.sub(r'\s*&&\s*', ' → ', c)
+    c = re.sub(r'\s*\|\|\s*', ' | ', c)
+    c = re.sub(r'\s*;\s*', ' ; ', c)
+    # Collapse whitespace
+    c = re.sub(r'\s+', ' ', c).strip()
+    # Limit length (with ellipsis)
+    if len(c) > 80:
+        c = c[:77] + "..."
+    return c
+
 def get_title(sd, msgs):
     p = sd.get("prompt", "")
     if p and len(p) > MIN_PROMPT:
-        c = p.replace("<user_input", "").replace("</user_input>", "").strip()
-        if c: return (c[:77] + "...") if len(c) > 80 else c
+        c = clean_title(p)
+        if c: return c
     for m in msgs:
         if m.get("role") == "user":
             for b in m.get("content", []):
-                if b.get("type") == "text":
+                if isinstance(b, dict) and b.get("type") == "text":
                     t = b.get("text", "").strip()
                     if t and len(t) > MIN_PROMPT:
-                        return (t[:77] + "...") if len(t) > 80 else t
+                        return clean_title(t)
     return f"Session {sd.get('session_id', 'unknown')}"
 
 def fmt_dur(start, end):
@@ -151,7 +166,9 @@ def export_session(session_dir, force=False):
 
 {conv}
 '''
-    safe = "".join(c if c.isalnum() or c in " -_" else "_" for c in title).strip()[:100]
+    # Create filename-safe slug: alphanumeric, hyphens, underscores only; collapse runs
+    safe = re.sub(r'[^a-zA-Z0-9_-]', '-', title).strip('-_, ')[:80]
+    safe = re.sub(r'[-_]{2,}', '-', safe).strip('-')
     ts_pfx = ""
     if start and start != "—":
         try:
