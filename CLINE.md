@@ -85,6 +85,15 @@ gemini-history        # List recent Gemini exports
 ## Aliases
 
 Shell aliases and functions are in `~/.cline/aliases.zsh` (sourced from `~/.zshrc`).
+## Session Memory
+
+After every session, record key facts in `memory/MEMORY.md` following Codex's pattern:
+- **What was built / learned**
+- **User preferences** (how Steven wants things done)
+- **Reusable knowledge** (patterns, commands, paths)
+- **Failures and how to do differently** (what went wrong, how to avoid it)
+
+This turns every session into a compounding knowledge base.
 
 ## Key Commands
 
