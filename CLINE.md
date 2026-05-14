@@ -63,6 +63,21 @@ And confirm: "✅ Sessions exported to `~/.cline/chat-history/`"
 
 ```bash
 ai-search "topic"     # Search both Cline + Gemini exports
+## Agents (Cline-native definitions)
+
+| Agent | File | When to Use |
+|-------|------|-------------|
+| **self-evolution** | `agents/self-evolution.md` | After sessions — reflect, extract, improve |
+| **code-reviewer** | `agents/code-reviewer.md` | Before claiming work is done |
+| **ecosystem-analyzer** | `agents/ecosystem-analyzer.md` | When auditing platform state |
+
+## Skills (Cline-native)
+
+| Skill | File | Trigger |
+|-------|------|---------|
+| **chat-history-export** | `skills/chat-history-export/SKILL.md` | Export / save / backup |
+| **systematic-debugging** | `skills/systematic-debugging/SKILL.md` | Fix / debug / error / broken |
+| **verification-before-completion** | `skills/verification-before-completion/SKILL.md` | Done / complete / finished |
 cli-history           # List recent Cline exports
 gemini-history        # List recent Gemini exports
 ```
