@@ -22,6 +22,7 @@ to find past work across all exports.
 - **Chat export**: launchd (5 min) + cron (1 hour) + manual (`ai-export-all`)
 - **Chat history**: `~/.cline/chat-history/` (21 exports, 1.3MB)
 - **Scripts**: `~/.cline/scripts/export-chat-history.py`, `~/.cline/scripts/export-gemini-history.py`
+- **Workspace guide**: `~/.cline/BASE.md`
 - **Shell aliases**: `~/.zshrc.d/chat-history.zsh`
 - **Home**: `/Users/steven`
 - **Primary repo**: `~/my-supremepowers/` (135 agents, 92 skills, 4 domains)
