@@ -12,3 +12,5 @@ chat-history/gemini/
 
 # Old analysis exports
 my-supremepowers-deepdive-export.md
+chat-history/*.md
+chat-history/gemini/

@@ -67,6 +67,10 @@ cli-history           # List recent Cline exports
 gemini-history        # List recent Gemini exports
 ```
 
+## Aliases
+
+Shell aliases and functions are in `~/.cline/aliases.zsh` (sourced from `~/.zshrc`).
+
 ## Key Commands
 
 ```bash
