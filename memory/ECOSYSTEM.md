@@ -165,6 +165,9 @@ Part of the pipeline: raw files → scan → enriched AI classification → agen
 - The skills we've been cloning are the industry-standard agent capabilities
 - We should use `npx skills add <repo>` instead of manual cloning
 - Cline is a supported agent — our skills can be published here
+
+### Stance
+Skills.sh is reference material — useful for pattern discovery and understanding the ecosystem landscape. But Cline-native skills are **original creations**, not imports from other publishers. The patterns from obra/superpowers, vercel-labs, etc. serve as inspiration, not dependencies.
 - Install: `npx skills add obra/superpowers` would pull all canonical skills
 Connects raw Python scripts to the agent/skill framework — classifies each file by what kind of intelligent asset it is and scores it for business value and integration readiness.
 ### Key scripts
