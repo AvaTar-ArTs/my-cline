@@ -21,6 +21,14 @@ to map the complete architecture of Steven's ecosystem.
 - Created `scripts/export-gemini-history.py` — Gemini session → markdown export
 - Created `skills/chat-history-export/SKILL.md` — reusable skill definition
 - Created `memory/INDEX.md` — persistent cross-session context
+### Built (continued)
+- **Cross-platform memory index** — `memory/ECOSYSTEM.md` maps all 6 platforms with architecture, hierarchy, and quick-reference commands. Any agent on any platform can read it.
+- **my-supremepowers CHANGELOG updated** — Ecosystem deep-dive and cleanup phase recorded
+- **Git cleanup** — Removed large audit data files (JSON, tar.gz) from git tracking, added to .gitignore. Secrets scrubbed from commit history via filter-branch. Both repos pushed: `AvaTar-ArTs/my-cline` and `AvaTar-ArTs/my-powers`.
+
+### Key Decisions (continued)
+- Secrets-bearing notebooklm files gitignored, not committed
+- Large audit data (50MB+ JSON) excluded from git
 - Created `memory/CHANGELOG.md` — this file
 - Created `.gitignore` — excludes runtime data, chat *.md exports
 - 12 previous Cline sessions exported, 8 Gemini sessions exported
