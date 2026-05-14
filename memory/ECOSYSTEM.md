@@ -82,6 +82,51 @@ Every platform follows: Governance Doc → Import Mechanism → Runtime → Trac
 
 | Level | Governance | Import | Runtime |
 |-------|-----------|--------|---------|
+## pythons/.worktrees/Context-Expert-Agent — Script Stash
+
+| | |
+|---|---|
+| **Location** | `~/pythons/.worktrees/Context-Expert-Agent/` |
+| **Size** | 321MB |
+| **Files** | 1,181 files (1,064 Python scripts, 297K lines) |
+| **Structure** | Flat directory + cataloging/ subdirectory |
+| **Origin** | Git worktree in the `~/pythons` monorepo |
+| **Status** | Historical script stash — patterns exported into ~/.cline/scripts/ |
+
+## pythons/enriched-pythons.csv — AI-Enriched Inventory
+
+| | |
+|---|---|
+| **Location** | `~/pythons/enriched-pythons.csv` |
+| **Size** | 7.2MB, 12,995 rows |
+| **Purpose** | AI-classified inventory of the entire pythons directory |
+
+### Classification per file
+- **intelligent_category**: agent, skill, documentation, or reference
+- **confidence_score**: 0.0-1.0 confidence in classification
+- **agent_affinity**: Which agent this file relates to (e.g. system-architect, studio-coach)
+- **skill_affinity**: Which skills relate (e.g. brainstorming, writing-plans)
+- **predicted_business_value**: 0.0-1.0
+- **integration_potential**: boolean
+- **complexity_score**: 0.0-1.0
+- **roi_potential**: 0.0-1.0
+- **estimated_effort**: low/medium/high
+- **maturity_level**: alpha/beta/stable
+- **agent_tier**: Tier-1-Compatible, etc.
+- **dependencies** / **dependents**: dependency mapping
+- **documentation_score**, **test_coverage**, **code_standards**, **security_score**, **accessibility_score**
+- **tags**, **ownership**, **review_status**
+
+### Purpose
+Connects raw Python scripts to the agent/skill framework — classifies each file by what kind of intelligent asset it is and scores it for business value and integration readiness.
+### Key scripts
+- `ai-conversation-exports.py` — File organization for AI export tools
+- `chat-export-analyzer.py` — Content-aware chat analysis
+- `ai-docs-generator.py` — OpenAI-powered documentation generation
+- `cataloging/` — 8 scripts for CSV analysis, code quality, consolidation recommendations
+- Hundreds of cleanup, analysis, and utility scripts
+
+Note: Also has `directory-unifier-agent` worktree (pruned).
 | my-supremepowers | 5-tier system | npm sync + symlinks | Skills, agents, hooks |
 | Qwen | Capability Registry | `qwen-sp` bootstrap | Hookify middleware |
 ## AutoTagger — File Scanner + n8n Workflow Marketplace
