@@ -50,6 +50,32 @@ code-reviewer, ecosystem-analyzer, filesystem-inventory, path-list-analyzer, tre
 revenue-optimizer, xeo-strategist, seo-keyword-analyst, project-launch-manager, knowledge-automation-strategist
 
 ## Key Architecture Patterns
+## git-ai — Universal Authorship Tracking
+
+`git-ai` is a git proxy that automatically attributes every commit to the AI tool
+that authored it. It intercepts git operations across all platforms via hooks.
+
+### What It Tracks Per Commit
+- Which **AI tool** (claude, gemini, cursor, codex, cline, etc.)
+- Which **model** (claude-sonnet-4-5, gemini-2.5-flash, gpt-5.5, etc.)
+- Which **human author** approved the changes
+- The **prompts** that generated the changes (with URLs to view them)
+- Lines **accepted** vs **overridden**
+
+### Commands
+```bash
+git-ai log --oneline -5          # Recent commits with AI attribution
+git-ai blame <file>              # Line-by-line AI authorship
+git-ai stats                     # AI authorship statistics
+git-ai install-hooks             # Install/update hooks across all platforms
+```
+
+### Platforms With Hooks Installed
+Claude Code, Codex, Cursor, VS Code, GitHub Copilot, OpenCode, Gemini, Windsurf
+
+### How to Use
+Use `git-ai commit` instead of `git commit` (or let the hooks handle it automatically).
+The hooks are already installed — commits made through AI tooling should auto-attribute.
 
 ### 1. Fractal Self-Governance
 Every platform follows: Governance Doc → Import Mechanism → Runtime → Tracking
