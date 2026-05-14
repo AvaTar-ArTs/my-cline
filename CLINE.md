@@ -1,4 +1,4 @@
-# BASE.md — Cline Agent Workspace
+# CLINE.md — Cline Agent Workspace
 
 This file provides guidance for **Cline** when operating in its own home directory.
 
